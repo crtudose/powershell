@@ -2,9 +2,6 @@
 --------------------
 Please watch out the Variables and Datatypes lecture to get sync with these scripts. 
 
-$myvariable=1
-Write-Host $myvariable
-
 $myvariable=1+1
 Write-Host $myvariable
 
