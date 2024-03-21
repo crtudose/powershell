@@ -157,3 +157,4 @@ Write-Host 'Status of the BITS service is stopped'
 $BITS_servicestatus = Get-Service | where-Object { $_.name -eq 'BITS'}
 $BITSstatus=$BITS_servicestatus.$Status
 }
+
