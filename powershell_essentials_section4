@@ -1,0 +1,55 @@
+1. Variables, datatypes
+--------------------
+Please watch out the Variables and Datatypes lecture to get sync with these scripts. 
+
+$myvariable=1
+Write-Host $myvariable
+
+$myvariable=1+1
+Write-Host $myvariable
+
+$myvariable='1'
+Write-Host $myvariable
+
+$myvariable='1'+'1'
+Write-Host $myvariable
+
+$myvariable="1"+"1"
+Write-Host $myvariable
+
+$myvariable ="$(1+2)"
+Write-Host $myvariable
+
+$myvariable ='$(1+2)'
+Write-Host $myvariable
+
+$server='vm1'
+Write-Host '$server'
+Write-Output "$server"
+
+$myvariable = 1
+$myvariable.GetType()
+
+$myvariable=1.4
+Write-Host $myvariable
+
+[int]$myvariable=1.4 
+Write-Host $myvariable
+
+[float]$myvariable=1.4 
+Write-Host $myvariable
+
+[datetime]$myvariable=1.4 
+Write-Host $myvariable
+
+[boolean]$myvariable=1.4 
+Write-Host $myvariable
+
+[long]$myvariable=1.4 
+Write-Host $myvariable
+
+$myarray='a','b','c'
+$myarray[2]
+$myarray.GetType()
+
+2.
