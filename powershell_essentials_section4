@@ -158,6 +158,8 @@ $BITS_servicestatus = Get-Service | where-Object { $_.name -eq 'BITS'}
 $BITSstatus=$BITS_servicestatus.$Status
 }
 
+
+# the Do-While loop in PowerShell will run the loop first and then evaluate the While 
 $OS='Windows'
 do
 {
