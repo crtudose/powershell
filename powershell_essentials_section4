@@ -148,3 +148,12 @@ while($i -lt 10)
 {
 Write-Host 'yes i am in the while loop'
 }
+
+$BITS_servicestatus = Get-Service | where-Object { $_.name -eq 'BITS'}
+$BITSstatus=$BITS_servicestatus.$Status
+while($BITSstatus -eq 'Stopped')
+{
+Write-Host 'Status of the BITS service is stopped'
+$BITS_servicestatus = Get-Service | where-Object { $_.name -eq 'BITS'}
+$BITSstatus=$BITS_servicestatus.$Status
+}
