@@ -141,3 +141,10 @@ Comparison operators:
 -replace
 -is -isnot (returns true or false if the objects are not the same)
 
+While / DoWhile Loops
+-------------------
+$i = 9
+while($i -lt 10)
+{
+Write-Hoat 'yes i am in the while loop'
+}
