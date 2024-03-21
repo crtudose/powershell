@@ -97,3 +97,8 @@ for (($i = 0), ($j = 0); $i -lt 10 -and $j -lt 10; $i++, $j++)
 
 $serverlist = Get-Content C:\Users\drand\Downloads\Variables+and+Datatypes+scripts.txt
 $serverlist
+
+for($i=0,$i -lt 3;$i++)
+{
+'Script will be executing in the server ' + $serverlist[$i]
+}
