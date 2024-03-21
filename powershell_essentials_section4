@@ -158,3 +158,13 @@ $BITS_servicestatus = Get-Service | where-Object { $_.name -eq 'BITS'}
 $BITSstatus=$BITS_servicestatus.$Status
 }
 
+$OS='Windows'
+do
+{
+for($i=0;$i -lt 100;i++)
+{
+Write-host 'My Operation is Windows'
+}
+}
+while($OS -eq 'Linux ')
+
