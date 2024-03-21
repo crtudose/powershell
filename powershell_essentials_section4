@@ -81,3 +81,9 @@ $servers[-1]
 $services=get-service
 $services[0]
 $services.GetType()
+
+3. Loops
+---------------------
+
+
+
