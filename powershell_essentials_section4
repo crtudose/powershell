@@ -84,6 +84,9 @@ $services.GetType()
 
 3. Loops
 ---------------------
-
+for($i=0;$i -lt 10; $i--)
+(
+$i
+)
 
 
