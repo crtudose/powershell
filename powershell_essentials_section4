@@ -105,7 +105,7 @@ Test-Connection $serverlist[$i]
 }
 
 Foreach loops
-$servers=Get-Content C:\Users\drand\Downloadsâserverlist.txt
+$servers=Get-Content C:\Users\drand\Downloads\serverlist.txt
 foreach($server in $servers)
 {
 Write-Host 'Server name is : '$server 
