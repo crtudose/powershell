@@ -163,7 +163,7 @@ do
 {
 for($i=0;$i -lt 100;$i++)
 {
-Write-host 'My Operation is Windows'
+Write-host 'My Operation is Windows'+$i
 }
 }
 while($OS -eq 'Linux ')
