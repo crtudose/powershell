@@ -135,3 +135,12 @@ else
 {
 Write-Host 'Total services count in my system is less than 100'
 }
+
+Comparison operators:
+----------------
+-eq, -ne, -gt, -ge -lt -le
+-like -not like -match -not match
+-Contains -not contains -in -notin
+-replace
+-is -isnot (returns true or false if the objects are not the same)
+
