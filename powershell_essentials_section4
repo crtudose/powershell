@@ -127,7 +127,7 @@ $services_count=$services.Count
 if($services_count -eq 319){
 Write-Host 'Total services count in my system = 319'
 }
-if($services_count -gt 100)
+elseif($services_count -gt 100)
 {
 Write-Host 'Total service count in my system is greater than 100'
 }
