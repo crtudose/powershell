@@ -52,4 +52,14 @@ $myarray='a','b','c'
 $myarray[2]
 $myarray.GetType()
 
-2.
+2. Arrays
+-----------------------
+$a=1,2,3,4,5
+$a
+$a.GetType()
+
+$a=('1','2','3','4','5')
+$a.GetType()
+
+$servers=@('VM1','VM2','VM3','VM4','VM5')
+$servers
