@@ -94,3 +94,5 @@ for (($i = 0), ($j = 0); $i -lt 10 -and $j -lt 10; $i++, $j++)
   "`$j:$i"
   "`$i:$j"
 }
+
+$serverlist = Get-Content C:\PS\Myfiles\ServerList.txt
