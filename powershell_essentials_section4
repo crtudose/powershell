@@ -101,4 +101,5 @@ $serverlist
 for($i=0,$i -lt 3;$i++)
 {
 'Script will be executing in the server ' + $serverlist[$i]
+Test-Connection $serverlist[$i]
 }
