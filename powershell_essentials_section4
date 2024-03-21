@@ -105,8 +105,18 @@ Test-Connection $serverlist[$i]
 }
 
 Foreach loops
+---------------
 $servers=Get-Content C:\Users\drand\Downloads\serverlist.txt
 foreach($server in $servers)
 {
 Write-Host 'Server name is : '$server 
+}
+
+Conditionals
+------------
+$x = 30
+if($x -eq 30){
+  write-host("this is if statement")
+}else {
+  write-host("this is else statement")
 }
