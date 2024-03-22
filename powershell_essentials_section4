@@ -245,7 +245,7 @@ cmdlets, providers, functions, workflows, variables, aliases saved as .psm1 exte
 default location $end:PSModulePath
 reusability and portability
 
-Get-Module -ListAvailable
+# Get-Module -ListAvailable
 
 script modules - psm1 files having functions and other scripts
 binary modules - compiled dll files typically created by developers
@@ -277,3 +277,18 @@ PS C:\Windows\system32> jobaddress
 data scientist
 
 PS C:\Windows\system32> Import-Module C:\Users\drand\Downloads\PSModules\jobdescription.psm1
+
+function machinename()
+{
+hostname
+}
+
+function username()
+{
+whoami
+}
+
+function bitsservice()
+{
+Get-Service | where {$_.Name -eq 'BITS'}
+}
