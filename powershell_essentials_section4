@@ -170,7 +170,7 @@ Write-host 'My Operation is Windows'+$i
 }
 while($OS -eq 'Linux ')
 
-Get-content
+Get-Content
 -----------------
 Get-Content -Path D:\Powershell_Learning\ErrorLog.txt
 Get-Content -Path D:\Powershell_Learning\* -Include '*.txt'
@@ -178,3 +178,13 @@ Get-Content -Path D:\Powershell_Learning\ErrorLog.txt -First 2
 Get-Content -Path D:\Powershell_Learning\ErrorLog.txt -Tail 2
 Get-Content -Path D:\Powershell_Learning\ErrorLog.txt | Where-Object {$_ -like '*Fail*'}
 
+Get-Service
+-------------
+shows the services currently running the computer
+PS C:\Windows\system32> Get-Service | Get-Member
+PS C:\Windows\system32> Get-Service | Select-Object Name,DisplayName,StartType,Status 
+
+PS C:\Windows\system32> Get-Service | Select-Object Name,DisplayName,StartType,Status | Where-Object {$_.Name -eq 'WSearch'}
+Name    DisplayName    StartType  Status
+----    -----------    ---------  ------
+WSearch Windows Search Automatic Running
