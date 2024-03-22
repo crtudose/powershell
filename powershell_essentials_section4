@@ -188,3 +188,5 @@ PS C:\Windows\system32> Get-Service | Select-Object Name,DisplayName,StartType,S
 Name    DisplayName    StartType  Status
 ----    -----------    ---------  ------
 WSearch Windows Search Automatic Running
+
+PS C:\Windows\system32> Get-Service | Select-Object Name,DisplayName,StartType,Status | Where-Object {$_.Name -eq 'WSearch'} | Stop-Service
