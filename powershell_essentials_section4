@@ -306,3 +306,18 @@ PS C:\Windows\system32> bitsservice
 Status   Name               DisplayName                           
 ------   ----               -----------                           
 Stopped  BITS               Background Intelligent Transfer Ser...
+
+Error handling
+--------------
+try
+{
+Write Hst 'this is an example of try catch mechanism'
+}
+catch
+{
+Write-Host 'this is a catch block'
+}
+finally
+{
+Write-Host 'this is the finally block , Whatever we are writing here will be executed irrespective of what happened above'
+}
