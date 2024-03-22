@@ -203,3 +203,24 @@ Get-ChildItem -Path D:\Powershell_Learning -Recurse -Include '*txt'
 Get-ChildItem -Path HKLM:\HARDWARE
 Get-ChildItem | Get-Member
 Get-ChildItem | select LastAccessTime
+
+Functions
+---------
+function sum()
+{
+param($a,$b)
+$c=$a+$b
+Write-Host 'sum of the numbers is :' $c
+}
+sum -a 25 -b 30
+
+function myprocess()
+{
+Get-Process
+}
+myprocess
+
+function checkOS()
+{
+
+}
