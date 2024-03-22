@@ -237,3 +237,12 @@ Write-Host 'Script will be executing in macos'
 }
 }
 checkOS Windows
+
+Modules
+--------
+important for automation
+cmdlets, providers, functions, workflows, variables, aliases saved as .psm1 extension
+default location $end:PSModulePath
+reusability and portability
+
+Get-Module -ListAvailable
