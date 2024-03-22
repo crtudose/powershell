@@ -347,5 +347,5 @@ $_.Exception.Itemname
 
 Secure credentials
 ----------------
-Get-Credential
-Get-wmiObject -Class win32_operatingsystem -ComputerName VM1 -Credential
+Get-Credential 
+Get-WmiObject -Class win32_operatingsystem -ComputerName VM1 -Credential $credential
