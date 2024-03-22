@@ -341,6 +341,6 @@ catch
 {
 Write-Host 'this is a catch block of a non terminating error'
 $_.Exception
-$_.Exception Message
-$_.Exception Itemname
+$_.Exception.Message
+$_.Exception.Itemname
 }
