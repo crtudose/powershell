@@ -170,3 +170,11 @@ Write-host 'My Operation is Windows'+$i
 }
 while($OS -eq 'Linux ')
 
+Get-content
+-----------------
+Get-Content -Path D:\Powershell_Learning\ErrorLog.txt
+Get-Content -Path D:\Powershell_Learning\* -Include '*.txt'
+Get-Content -Path D:\Powershell_Learning\ErrorLog.txt -First 2
+Get-Content -Path D:\Powershell_Learning\ErrorLog.txt -Tail 2
+Get-Content -Path D:\Powershell_Learning\ErrorLog.txt | Where-Object {$_ -like '*Fail*'}
+
