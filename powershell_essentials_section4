@@ -321,3 +321,26 @@ finally
 {
 Write-Host 'this is the finally block , Whatever we are writing here will be executed irrespective of what happened above'
 }
+
+Terminating error:
+try
+{
+Get-ChildItem d:\ps
+}
+catch
+{
+Write-Host 'this is a catch block'
+}
+
+Non-Terminating error:
+try
+{
+Get-ChildItem d:\p -ErrorAction Stop
+}
+catch
+{
+Write-Host 'this is a catch block of a non terminating error'
+$_.Exception
+$_.Exception Message
+$_.Exception Itemname
+}
