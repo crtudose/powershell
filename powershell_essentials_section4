@@ -348,6 +348,11 @@ $_.Exception.Itemname
 Secure credentials
 ----------------
 ConvertFrom-SecureString // ConvertTo-SecureString
-Get-Credential 
+
+$credential = Get-Credential 
 Get-WmiObject -Class win32_operatingsystem -ComputerName VM1 -Credential $credential
+# ctudose / ctudose1992$
 (Get-Credential).Password | ConvertFrom-SecureString | Out-File C:\Users\drand\Downloads\parolaps.txt
+$passwordfromfile=Get-Content C:\Users\drand\Downloads\parolaps.txt | ConvertTo-SecureString
+$credential=New-Object System.Management.Automation.PSCredential("appsuser",@passwordfromfile)
+Get-WmiObject -Class Win32_operatingsystem -ComputerName VM1 -Credential $credential
