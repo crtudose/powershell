@@ -347,5 +347,7 @@ $_.Exception.Itemname
 
 Secure credentials
 ----------------
+ConvertFrom-SecureString // ConvertTo-SecureString
 Get-Credential 
 Get-WmiObject -Class win32_operatingsystem -ComputerName VM1 -Credential $credential
+(Get-Credential).Password
