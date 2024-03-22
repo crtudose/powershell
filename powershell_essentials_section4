@@ -251,3 +251,18 @@ script modules - psm1 files having functions and other scripts
 binary modules - compiled dll files typically created by developers
 manifest modules - script modules that contain a manifest (contents of a module and determines how a module is processed)
 dynamic modules - modules that are never written to disk and are only avaialble in memory
+
+function name()
+{
+Write-Host 'name of the employee is john'
+}
+
+function address()
+{
+Write-Host 'NY, New York'
+}
+
+function jobaddress()
+{
+Write-Host 'data scientist'
+}
