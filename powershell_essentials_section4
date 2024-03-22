@@ -292,3 +292,17 @@ function bitsservice()
 {
 Get-Service | where {$_.Name -eq 'BITS'}
 }
+
+PS C:\Windows\system32> Import-Module C:\Users\drand\Downloads\PSModules\findservice.psm1
+
+PS C:\Windows\system32> username
+desktop-t0v4o7j\drand
+
+PS C:\Windows\system32> machinename
+DESKTOP-T0V4O7J
+
+PS C:\Windows\system32> bitsservice
+
+Status   Name               DisplayName                           
+------   ----               -----------                           
+Stopped  BITS               Background Intelligent Transfer Ser...
