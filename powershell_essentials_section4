@@ -222,5 +222,18 @@ myprocess
 
 function checkOS()
 {
-
+param($OS)
+if($OS -eq 'windows')
+{
+Write-Host 'Script will be executing in windows'
 }
+elseif($OS -eq 'Linux')
+{
+Write-Host 'Script will be executing in linux'
+}
+elseif($OS -eq 'macos')
+{
+Write-Host 'Script will be executing in macos'
+}
+}
+checkOS Windows
