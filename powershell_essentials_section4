@@ -266,3 +266,12 @@ function jobaddress()
 {
 Write-Host 'data scientist'
 }
+
+PS C:\Windows\system32> name
+name of the employee is john
+
+PS C:\Windows\system32> address
+NY, New York
+
+PS C:\Windows\system32> jobaddress
+data scientist
