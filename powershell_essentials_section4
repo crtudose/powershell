@@ -197,3 +197,9 @@ gets the items and child items in one or more specified locations
 Get-ChildItem -Path D:\
 Get-ChildItem -Path D:\Powershell_Learning
 Get-ChildItem -Path D:\Powershell_Learning | select Name,LastWriteTime
+
+Get-ChildItem -Path D:\Powershell_Learning -Recurse
+Get-ChildItem -Path D:\Powershell_Learning -Recurse -Include '*txt'
+Get-ChildItem -Path HKLM:\HARDWARE
+Get-ChildItem | Get-Member
+Get-ChildItem | select LastAccessTime
