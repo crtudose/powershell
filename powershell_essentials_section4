@@ -353,5 +353,13 @@ $credential = Get-Credential
 Get-WmiObject -Class win32_operatingsystem -ComputerName VM1 -Credential $credential
 (Get-Credential).Password | ConvertFrom-SecureString | Out-File C:\Users\drand\Downloads\parolaps.txt
 $passwordfromfile=Get-Content C:\Users\drand\Downloads\parolaps.txt | ConvertTo-SecureString
-$credential=New-Object System.Management.Automation.PSCredential("appsuser",@passwordfromfile)
+$credential=New-Object System.Management.Automation.PSCredential("appsuser".$passwordfromfile)
 Get-WmiObject -Class Win32_operatingsystem -ComputerName VM1 -Credential $credential
+
+$key=New-Object Byte[] 32
+[security.cryptography.RNGCryptoserviceprovider]::Create().Getbytes($key)
+$key  | Out-File C:\ps\aes.key
+(Get-Credential).Password | ConvertFrom-SecureString -Key (Get-Content C:\ps\aes.key) | Set-Content 'C:\ps\password.txt'
+$password=Get-Content C:\ps\password.txt |ConvertTo-SecureString -key (Get-Content C:\ps\aes.key)
+$credentials=New-Object System.Management.Automation.PSCredential("appuser",$password)
+Get-Service -ComputerName vm1 -credential $credentials
