@@ -1,2 +1,3 @@
 Write output directly to a text file
 Out-File [-FilePath] <string> [-Append] [-Force]
+'Powershell is a very good scripting tool' | Out-File C:\PS\Outputfile.txt
