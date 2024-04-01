@@ -13,5 +13,5 @@ Get-Process | Out-gridview
 
 Get-Process | Select-Object -Property Name, WorkingSet, PeakWorkingSet | 
   Sort-Object -Property.workingSet -Descending | Out-Gridview
-($A = Get-ChildItem -Path $PSHOME -Recursive) | Out-Gridview
+($A = Get-ChildItem -Path $PSHOME -Recurse) | Out-Gridview
 Invoke-Command -ComputerName VM2 -ScriptBlock {Get-Service} Out-Gridview
