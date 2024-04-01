@@ -16,6 +16,7 @@ foreach($server in $servers)
 $servers=Get-Content C:\ps\MyFiles\ServerList.txt
 
 Clear-Content C:\PS\MyFiles\output.txt
+
 foreach($server in $servers)
 {
  'The script is going to get executed in ' + $server +  'Server' | out-file C:\PS\MyFiles\output.txt -Append
