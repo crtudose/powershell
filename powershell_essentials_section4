@@ -363,3 +363,13 @@ $key  | Out-File C:\ps\aes.key
 $password=Get-Content C:\ps\password.txt |ConvertTo-SecureString -key (Get-Content C:\ps\aes.key)
 $credentials=New-Object System.Management.Automation.PSCredential("appuser",$password)
 Get-Service -ComputerName vm1 -credential $credentials
+
+Whatif switch
+-------------------------
+Copy-Item "E:\ps\WhatifTesting\dora.png" -Destination "E:\ps\WhatifTesting\Destination"  -WhatIf
+Stop-Service BITS -WhatIf
+Start-Service BITS -WhatIf
+Remove-Item 'C:\MyDB' -Recurse -WhatIf
+Get-ChildItem -File '*.mdf' -Recurse -LiteralPath C:\MyDB\ | Remove-Item -WhatIf
+get-help WhatIf
+
