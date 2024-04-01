@@ -10,3 +10,6 @@ Open files with gridview
 -------------------
 Out-gridview cmdlet sends the output from a command to a grid view window where the output is displayed in an interactive table
 Get-Process | Out-gridview
+
+Get-Process | Select-Object -Property Name, WorkingSet, PeakWorkingSet | 
+  Sort-Object -Property.workingSet -Descending | Out-Gridview
