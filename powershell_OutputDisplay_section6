@@ -31,3 +31,23 @@ Get-Service | Select-Object Name, DisplyName, Status | ConvertTo-Html -As Table 
 Invoke-Item C:\Users\drand\Downloads\csv_file.csv
 Get-Service | Select-Object Name, DisplyName, Status | ConvertTo-Html -As Table -PreContent "report generated at $(Get-Date)" | Out-File C:\Users\drand\Downloads\csv_file.csv
 Invoke-Item C:\Users\drand\Downloads\csv_file.csv
+
+# combine 2 outputs to an html file
+$os=Get-WmiObject -Class Win32_Operatingsystem -ComputerName localhost | ConvertTo-Html -As Table -Fragment -PreContent "<h2>Report gerated on $(Get-Date) </h2>" |Out-String
+$services=Get-Service | select name, DisplayName, Status  | ConvertTo-Html -As Table -Fragment -PreContent "<h2>Hardware</h2>" |Out-String
+
+ConvertTo-Html -Title "sys information for VM1 " -PreContent $os,$services -Body "<h2> Gathering OS Details <h2>" |Out-File 'C:\PS\html.html' 
+Invoke-Item C:\PS\html.html
+
+$Header = @"
+<style>
+TABLE {border-width: 1px; border-style: solid; border-color: black; border-collapse: collapse;}
+TD {border-width: 1px; padding: 3px; border-style: solid; border-color: black;}
+</style>
+"@
+
+$os=Get-WmiObject -Class Win32_Operatingsystem -ComputerName localhost | ConvertTo-Html -As Table -PreContent "<h2>Report gerated on $(Get-Date) </h2>" |Out-String
+$services=Get-Service | select name, DisplayName, Status  | ConvertTo-Html -As Table  -PreContent "<h2>Hardware</h2>" |Out-String
+
+ConvertTo-Html -Title "sys information for VM1 " -PreContent $os,$services -Body "<h2> Gathering OS Details <h2>" -Head $header |Out-File 'C:\PS\html.html' 
+Invoke-Item C:\PS\html.html
