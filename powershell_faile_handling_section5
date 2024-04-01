@@ -33,10 +33,11 @@ Convert data from CSV into structured manner
 Send this data to a variable:
 
 $servers=Import-csv C:\ps\MyFiles\ServerList_CSV.csv
+Clear-content C:\ps\myfiles\log.txt
 foreach($server in $servers)
 {
 $servername=$server.ServerName
 $ip=$server.IP
 Write-Host 'checking server ping status' $servername
-Test-Connection -ComputerName $ip -Count 1
+Test-Connection -ComputerName $ip -Count 1 | Out-File C:\ps/MyFiles\log.txt -Append
 }
