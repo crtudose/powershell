@@ -3,3 +3,4 @@ Out-File [-FilePath] <string> [-Append] [-Force]
 'Powershell is a very good scripting tool' | Out-File C:\PS\Outputfile.txt
 'Powershell is a very good scripting tool' | Out-File C:\PS\Outputfile.txt -Append
 Get-Process | Out-File C:\ps\Processoutput.txt
+Invoke-Item C:\ps\Processoutput.txt
