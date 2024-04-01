@@ -35,4 +35,6 @@ foreach($server in $servers)
 {
 $servername=$server.ServerName
 $ip=$server.IP
+Write-Host 'checking server ping status' $servername
+Test-Connection -ComputerName $ip -Count 1
 }
