@@ -1,8 +1,10 @@
-File handling / text files
-foreach($server in $serverlist)
+# File handling / text files
+# foreach($server in $serverlist)
 
 Script referring to the class : Handling text files using powershell.
 ------------------------------------------
+# This script is returning in an output text file the name of the server, OS, lastreboot time converted to human readable format
+
 $servers=Get-Content C:\ps\MyFiles\ServerList.txt
 Clear-Content C:\PS\MyFiles\output.txt
 
