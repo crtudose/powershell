@@ -21,8 +21,11 @@ Clear-Content C:\PS\MyFiles\output.txt
 Handling csv files
 ---------------
 import-csv cmdlet creates table-like custom objects from the items in a comma separated csv file
-for example, we input in file ServiceList_CSV.csv file the below data
+for example, we input in file ServerList_CSV.csv file the below data
 ServerName, IP
 VM1, 192.168.225.11
 VM2, 192.168.225.12
 CENTRALSERVER,192,168.225.10
+
+Convert data from CSV into structured manner
+# Import-csv C:\ps\MyFiles\ServerList_CSV.csv
