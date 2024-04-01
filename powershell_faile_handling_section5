@@ -17,11 +17,3 @@ foreach($server in $servers)
 $servers=Get-Content C:\ps\MyFiles\ServerList.txt
 
 Clear-Content C:\PS\MyFiles\output.txt
-
-foreach($server in $servers)
-{
- 'The script is going to get executed in ' + $server +  'Server' | out-file C:\PS\MyFiles\output.txt -Append
-  $serveroutput=Get-WmiObject -Class Win32_Operatingsystem -ComputerName $server | Select-Object @{'Name'='ServerName';'Expression'={$_.PSCOmputerName}},
- @{'Name'='Last Restart Time';'Expression'={$_.ConvertToDateTime($_.LastBootUpTime)}}
-  $serveroutput.ServerName+','+ $serveroutput.'Last Restart Time' | out-file C:\PS\MyFiles\output.txt -Append
-} 
