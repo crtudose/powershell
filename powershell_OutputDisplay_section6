@@ -1,6 +1,12 @@
 Write output directly to a text file
+------------
 Out-File [-FilePath] <string> [-Append] [-Force]
 'Powershell is a very good scripting tool' | Out-File C:\PS\Outputfile.txt
 'Powershell is a very good scripting tool' | Out-File C:\PS\Outputfile.txt -Append
 Get-Process | Out-File C:\ps\Processoutput.txt
 Invoke-Item C:\ps\Processoutput.txt # This command opens the file
+
+Open files with gridview
+-------------------
+Out-gridview cmdlet sends the output from a command to a grid view window where the output is displayed in an interactive table
+Get-Process | Out-gridview
