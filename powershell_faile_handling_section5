@@ -29,3 +29,10 @@ CENTRALSERVER,192,168.225.10
 
 Convert data from CSV into structured manner
 # Import-csv C:\ps\MyFiles\ServerList_CSV.csv
+Send this data to a variable:
+$servers=Import-csv C:\ps\MyFiles\ServerList_CSV.csv
+foreach($server in $servers)
+{
+$server.ServerName
+$server.IP
+}
