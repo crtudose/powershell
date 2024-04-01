@@ -41,3 +41,33 @@ $ip=$server.IP
 Write-Host 'checking server ping status' $servername
 Test-Connection -ComputerName $ip -Count 1 | Out-File C:\ps/MyFiles\log.txt -Append
 }
+
+Handling xml files
+--------------
+xml is used to describe data stored in a specific format
+xml format stores data in a structure that is machine readable and human readable
+
+<?xml version="1.0"?>
+<ServerList>
+  <Server>
+      <Name>CENTRALSERVER</Name>
+      <IP>192.168.225.10</IP>
+      <Location>Asia</Location>
+  </Server>
+    <Server>
+      <Name>VM1</Name>
+      <IP>192.168.225.11</IP>
+      <Location>USA</Location>
+  </Server>
+    <Server>
+      <Name>VM2</Name>
+      <IP>192.168.225.12</IP>
+      <Location>INDIA</Location>
+  </Server>
+</ServerList>
+
+[xml] $d=Get-Content D:\Powershell_Learning\ServerList_XML.xml
+foreach($server in $d.ServerList.Server)
+{
+$server.Name+','+$server.IP+','+$server.Location
+}
