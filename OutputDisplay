@@ -1,0 +1,2 @@
+Write output directly to a text file
+Out-File [-FilePath] <string> [-Append] [-Force]
