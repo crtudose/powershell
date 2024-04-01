@@ -17,4 +17,5 @@ Get-Process | Select-Object -Property Name, WorkingSet, PeakWorkingSet |
 Invoke-Command -ComputerName VM2 -ScriptBlock {Get-Service} Out-Gridview
 
 Export-csv converts objects into a series of comma separated value CSV strings and saves into a file
-Get-Service | Export-Csv -path C:\Users\drand\Downloads\csv_file.csv
+Get-Service | Select-Object Name, DisplyName, Status | Export-Csv -path C:\Users\drand\Downloads\csv_file.csv
+Invoke-Item C:\Users\drand\Downloads\csv_file.csv
