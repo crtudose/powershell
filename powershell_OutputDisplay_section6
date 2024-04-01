@@ -29,3 +29,5 @@ Get-Service | ConvertTo-Html -As Table | out-file C:\ps\htmlout.html
 Invoke-Item  C:\ps\htmlout.html
 Get-Service | Select-Object Name, DisplyName, Status | ConvertTo-Html -As Table | Out-File C:\Users\drand\Downloads\csv_file.csv
 Invoke-Item C:\Users\drand\Downloads\csv_file.csv
+Get-Service | Select-Object Name, DisplyName, Status | ConvertTo-Html -As Table -PreContent "report generated at $(Get-Date)" | Out-File C:\Users\drand\Downloads\csv_file.csv
+Invoke-Item C:\Users\drand\Downloads\csv_file.csv
