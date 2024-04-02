@@ -35,4 +35,7 @@ Invoke-Item C:\PS\datavasedetails.html
 
 # other tools: dbatools (Invoke-DBAQuery), sqlps
 
-#
+Send emails
+-------------------
+$cred=Get-Credential
+Send-MailMessage -From 'tudose.cristian92@gmail.com' -To 'dr.andreeatudose@gmail.com' -Subject 'Alert' -SmtpServer smtp.gmail.com -port 587 -Body 'alert' -Credential $cred -UseSsl
