@@ -21,3 +21,8 @@ Get-WmiObject -Class Win32_LogicalDisk | Select-Object DeviceID,Freespace
 If you want to customize output with amount of free space in GB and %
 Get-WmiObject -Class Win32_LogicalDisk | Select-Object @{'Name'='DriveName';'Expression'={$_.DeviceID}},@{'Name'='FreeSpace in GB';'Expression'={[math]::Round($_.FreeSpace/1GB)}}
 Get-WmiObject -Class Win32_LogicalDisk | Select-Object @{'Name'='DriveName';'Expression'={$_.DeviceID}},@{'Name'='FreeSpace %';'Expression'={[math]::Round($_.FreeSpace/$_.size)/100)}}
+
+Query a SQL server DB
+--------------
+Invoke-Sqlcmd - to connect and query the sql server db
+Invoke-Sqlcmd -ServerInstance CENTRALSERVER -Query 'select name,state_desc,user_access_desc from sys.database'
