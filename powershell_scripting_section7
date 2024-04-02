@@ -18,6 +18,6 @@ Get-WMIObject LogicalDisk
 Invoke-Command -ComputerName vm1 -ScriptBlock {Get-PSDrive -PSProvider FileSystem}
 Get-WmiObject -Class Win32_LogicalDisk | Select-Object DeviceID,Freespace
 
-If you want to customize output:
+If you want to customize output with amount of free space in GB and %
 Get-WmiObject -Class Win32_LogicalDisk | Select-Object @{'Name'='DriveName';'Expression'={$_.DeviceID}},@{'Name'='FreeSpace in GB';'Expression'={[math]::Round($_.FreeSpace/1GB)}}
 Get-WmiObject -Class Win32_LogicalDisk | Select-Object @{'Name'='DriveName';'Expression'={$_.DeviceID}},@{'Name'='FreeSpace %';'Expression'={[math]::Round($_.FreeSpace/$_.size)/100)}}
