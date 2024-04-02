@@ -6,4 +6,6 @@
 - unrestricted - all scripts will run regardless of who created them
 
 Get-ExecutionPolicy
-Set-ExecutionPolicy RemoteSigned
+Set-ExecutionPolicy RemoteSigned # need admin rights
+
+change directory - Set-Location command
