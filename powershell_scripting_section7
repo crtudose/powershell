@@ -12,3 +12,5 @@ change directory - Set-Location command
 
 Windows space utilization analysis using powershell
 -------------------------
+Get-PSDrive -PSProvider FileSystem
+Get-WMIObject LogicalDisk
