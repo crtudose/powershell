@@ -20,3 +20,4 @@ Get-WmiObject -Class Win32_LogicalDisk | Select-Object DeviceID,Freespace
 
 If you want to customize output:
 Get-WmiObject -Class Win32_LogicalDisk | Select-Object @{'Name'='DriveName';'Expression'={$_.DeviceID}},@{'Name'='FreeSpace in GB';'Expression'={[math]::Round($_.FreeSpace/1GB)}}
+Get-WmiObject -Class Win32_LogicalDisk | Select-Object @{'Name'='DriveName';'Expression'={$_.DeviceID}},@{'Name'='FreeSpace %';'Expression'={[math]::Round($_.FreeSpace/$_.size)/100)}}
