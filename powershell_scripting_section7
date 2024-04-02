@@ -14,3 +14,5 @@ Windows space utilization analysis using powershell
 -------------------------
 Get-PSDrive -PSProvider FileSystem
 Get-WMIObject LogicalDisk
+
+Invoke-Command -ComputerName vm1 -ScriptBlock {Get-PSDrive -PSProvider FileSystem}
