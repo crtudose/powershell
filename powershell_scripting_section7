@@ -26,5 +26,9 @@ Query a SQL server DB
 --------------
 Invoke-Sqlcmd - to connect and query the sql server db
 Invoke-Sqlcmd -ServerInstance CENTRALSERVER -Query 'select name,state_desc,user_access_desc from sys.database'
+
 Invoke-Sqlcmd -ServerInstance CENTRALSERVER -Query 'select name,state_desc,user_access_desc from sys.database' | ConvertTo-Html -as Table | Out-File C:\PS\datavasedetails.html
+Invoke-Item C:\PS\datavasedetails.html
+
+Invoke-Sqlcmd -ServerInstance CENTRALSERVER -Query 'select name,state_desc,user_access_desc from sys.database' | select * -ExcludeProperty ItemArray, Table, RowError, Rowstate, HasErrors | ConvertTo-Html -as Table | Out-File C:\PS\datavasedetails.html
 Invoke-Item C:\PS\datavasedetails.html
