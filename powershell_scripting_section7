@@ -9,3 +9,6 @@ Get-ExecutionPolicy
 Set-ExecutionPolicy RemoteSigned # need admin rights
 
 change directory - Set-Location command
+
+Windows space utilization analysis using powershell
+-------------------------
