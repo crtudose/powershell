@@ -19,5 +19,5 @@ Invoke-Command -ComputerName vm1 -ScriptBlock {Get-PSDrive -PSProvider FileSyste
 Get-WmiObject -Class Win32_LogicalDisk | Select-Object DeviceID,Freespace
 
 If you want to customize output:
-Get-WmiObject -Class Win32_LogicalDisk | Select-Object @{'Name'='DriveName';'Expression'={$_.DeviceID}}
+Get-WmiObject -Class Win32_LogicalDisk | Select-Object @{'Name'='DriveName';'Expression'={$_.DeviceID}},@{'Name'='FreeSpace';'Expression'={$_.FreeSpace}}
 
