@@ -37,5 +37,6 @@ Invoke-Item C:\PS\datavasedetails.html
 
 Send emails
 -------------------
-$cred=Get-Credential
+$password = ConvertTo-SecureString "mygmailpassword" -AsPlainText -Force
+$Cred = New-Object System.Management.Automation.PSCredential ("username", $password)
 Send-MailMessage -From 'tudose.cristian92@gmail.com' -To 'dr.andreeatudose@gmail.com' -Subject 'Alert' -SmtpServer smtp.gmail.com -port 587 -Body 'alert' -Credential $cred -UseSsl
