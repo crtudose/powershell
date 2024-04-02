@@ -16,4 +16,4 @@ Get-PSDrive -PSProvider FileSystem
 Get-WMIObject LogicalDisk
 
 Invoke-Command -ComputerName vm1 -ScriptBlock {Get-PSDrive -PSProvider FileSystem}
-Get-WmiObject -Class Win32_LogicalDisk
+Get-WmiObject -Class Win32_LogicalDisk | Select-Object DeviceID,Freespace
