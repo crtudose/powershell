@@ -1,5 +1,6 @@
 # Execution policy needs to be in place first
 3 types
-- restricted
+- restricted - scripts will not run (default)
 - remotesigned - locally created subscriptions will run
 - allsigned - scripts will run if signed by trusted publisher
+- unrestricted - all scripts will run regardless of who created them
